@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useNLP } from "../hooks/useNLP";
-import { PageHeader, ErrorAlert, Card, LoadingSpinner } from "../components/index.jsx";
+import { useNLP } from "@/hooks/useNLP";
+import { PageHeader, ErrorAlert, Card, LoadingSpinner } from "@/components";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ResponsiveContainer } from "recharts";
 
 const EXAMPLES = [

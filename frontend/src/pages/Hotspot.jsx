@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useHotspot } from "../hooks/useHotspot";
-import { PageHeader, ErrorAlert, Card, LoadingSpinner, RiskBadge } from "../components/index.jsx";
+import {
+  PageHeader,
+  ErrorAlert,
+  Card,
+  LoadingSpinner,
+  RiskBadge,
+} from "@/components";
 import { MapPin, Navigation } from "lucide-react";
 
 const CHICAGO_LOCATIONS = [

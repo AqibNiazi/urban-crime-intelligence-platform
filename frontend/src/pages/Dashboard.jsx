@@ -1,7 +1,7 @@
 import { useHealth } from "../hooks/useHealth";
-import { StatCard, Card, LoadingSpinner } from "../components/index.jsx";
+import { StatCard, Card, LoadingSpinner } from "@/components";
 import { Activity, CheckCircle, XCircle } from "lucide-react";
-import clsx from "clsx";
+
 
 const MODEL_LABELS = {
   xgb_model:        "XGBoost Classifier",

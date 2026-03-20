@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
-import { useForecast } from "../hooks/useForecast";
-import { PageHeader, ErrorAlert, Card, LoadingSpinner, StatCard } from "../components/index.jsx";
+import { useForecast } from "@/hooks/useForecast";
+import {
+  PageHeader,
+  ErrorAlert,
+  Card,
+  LoadingSpinner,
+  StatCard,
+} from "@/components";
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine,
 } from "recharts";

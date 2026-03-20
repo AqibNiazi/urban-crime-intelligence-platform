@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { usePredict } from "../hooks/usePredict";
-import { PageHeader, ErrorAlert, Card, LoadingSpinner } from "../components/index.jsx";
+import { PageHeader, ErrorAlert, Card, LoadingSpinner } from "@/components";
 import { RadarChart, Radar, PolarGrid, PolarAngleAxis, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Cell } from "recharts";
 
 const SEASONS  = ["Winter", "Spring", "Summer", "Fall"];
