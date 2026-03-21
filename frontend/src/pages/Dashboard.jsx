@@ -26,10 +26,30 @@ export default function Dashboard() {
 
       {/* Stat row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <StatCard label="Models"      value="5"            sub="Trained on Chicago dataset" accent="blue"   />
-        <StatCard label="API Status"  value={online ? "Online" : "Offline"} sub="localhost:5000"  accent={online ? "green" : "red"} />
-        <StatCard label="Crime Types" value="30+"          sub="Classification classes"     accent="purple" />
-        <StatCard label="Dataset"     value="300k"         sub="Training samples"           accent="amber"  />
+        <StatCard
+          label="Models"
+          value="5"
+          sub="Trained on Chicago dataset"
+          accent="blue"
+        />
+        <StatCard
+          label="API Status"
+          value={online ? "Online" : "Offline"}
+          sub="localhost:5000"
+          accent={online ? "green" : "red"}
+        />
+        <StatCard
+          label="Crime Types"
+          value="30+"
+          sub="Classification classes"
+          accent="purple"
+        />
+        <StatCard
+          label="Dataset"
+          value="300k"
+          sub="Training samples"
+          accent="amber"
+        />
       </div>
 
       {/* Model health */}
@@ -69,7 +89,7 @@ export default function Dashboard() {
         ) : (
           !loading && (
             <p className="text-sm text-gray-600">
-              Cannot reach the Flask API. Make sure it's running on localhost:5000.
+              Cannot reach the API. Check if the HuggingFace Space is running.
             </p>
           )
         )}
@@ -80,13 +100,30 @@ export default function Dashboard() {
         <h2 className="text-sm font-medium text-white mb-4">Features</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
-            { title: "Crime Prediction",   desc: "XGBoost model — predict crime type from location and time" },
-            { title: "NLP Classification", desc: "TF-IDF pipeline — classify from incident description text" },
-            { title: "Crime Forecast",     desc: "Prophet model — 30-day daily crime count forecast" },
-            { title: "Hotspot Detection",  desc: "K-Means clustering — risk level for any Chicago coordinate" },
+            {
+              title: "Crime Prediction",
+              desc: "XGBoost model — predict crime type from location and time",
+            },
+            {
+              title: "NLP Classification",
+              desc: "TF-IDF pipeline — classify from incident description text",
+            },
+            {
+              title: "Crime Forecast",
+              desc: "Prophet model — 30-day daily crime count forecast",
+            },
+            {
+              title: "Hotspot Detection",
+              desc: "K-Means clustering — risk level for any Chicago coordinate",
+            },
           ].map((f) => (
-            <div key={f.title} className="p-3 rounded-lg border border-gray-800 bg-gray-800/30">
-              <p className="text-sm font-medium text-gray-200 mb-0.5">{f.title}</p>
+            <div
+              key={f.title}
+              className="p-3 rounded-lg border border-gray-800 bg-gray-800/30"
+            >
+              <p className="text-sm font-medium text-gray-200 mb-0.5">
+                {f.title}
+              </p>
               <p className="text-xs text-gray-500">{f.desc}</p>
             </div>
           ))}

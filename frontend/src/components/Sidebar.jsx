@@ -59,9 +59,9 @@ export default function Sidebar({ apiStatus }) {
             )}
           >
             <p className="text-sm font-semibold text-white leading-none">
-              CrimeIQ
+              CrimeSense
             </p>
-            <p className="text-xs text-gray-500 mt-0.5">Analytics Platform</p>
+            <p className="text-xs text-gray-500 mt-0.5">Crime Intelligence</p>
           </div>
         </div>
       </div>
@@ -135,7 +135,11 @@ export default function Sidebar({ apiStatus }) {
               <p className="text-xs font-medium text-gray-300">
                 API {online ? "Connected" : "Offline"}
               </p>
-              <p className="text-xs text-gray-600">localhost:5000</p>
+              <p className="text-xs text-gray-600">
+                {online
+                  ? "aqibniazi-crime-analytics-api.hf.space"
+                  : "API unreachable"}
+              </p>
             </div>
           </div>
         )}
