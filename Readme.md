@@ -445,7 +445,7 @@ Base URL (production): `https://aqibniazi-crime-analytics-api.hf.space`
 If you reference this project in your research, please cite it as:
 
 ```bibtex
-@software{javed2026crimesense,
+@software{crimesense,
   author    = {Javed, Muhammad Aqib},
   title     = {CrimeSense: A Multi-Module Machine Learning Platform for
                Spatio-Temporal Crime Analytics, NLP-Based Incident
