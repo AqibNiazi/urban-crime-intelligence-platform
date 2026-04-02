@@ -65,7 +65,7 @@
 | -------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Frontend (Vercel)                | [https://urban-crime-intelligence.vercel.app](https://urban-crime-intelligence.vercel.app)       |
 | Backend API (HuggingFace Spaces) | [https://aqibniazi-crime-analytics-api.hf.space](https://aqibniazi-crime-analytics-api.hf.space) |
-| Training Notebook (Kaggle)       | _Link to your published Kaggle notebook_                                                         |
+| Training Notebook (Kaggle)       | [https://www.kaggle.com/code/maqibniazi/urban-crime-intelligence-platform] (https://www.kaggle.com/code/maqibniazi/urban-crime-intelligence-platform) |                                                         |
 
 ## Screenshots
 
