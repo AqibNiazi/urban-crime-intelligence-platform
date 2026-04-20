@@ -136,9 +136,7 @@ export default function Sidebar({ apiStatus }) {
                 API {online ? "Connected" : "Offline"}
               </p>
               <p className="text-xs text-gray-600">
-                {online
-                  ? "aqibniazi-crime-analytics-api.hf.space"
-                  : "API unreachable"}
+                {online ? "crime-analytics-api" : "API unreachable"}
               </p>
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function Dashboard() {
         <StatCard
           label="API Status"
           value={online ? "Online" : "Offline"}
-          sub="localhost:5000"
+          sub="crime-analytics-api"
           accent={online ? "green" : "red"}
         />
         <StatCard
