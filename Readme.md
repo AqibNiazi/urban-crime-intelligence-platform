@@ -114,23 +114,23 @@ This project addresses these gaps with a reproducible, modular pipeline built on
 ┌──────────────────────────▼──────────────────────────────────────┐
 │                         API LAYER                               │
 │              Flask 3.0 + Flask-CORS + Gunicorn                  │
-│  ┌──────────────┐ ┌──────────────┐ ┌─────────────┐ ┌────────┐  │
-│  │ GET /health  │ │ POST/predict │ │GET /forecast│ │  ...   │  │
-│  └──────────────┘ └──────────────┘ └─────────────┘ └────────┘  │
+│  ┌──────────────┐ ┌──────────────┐ ┌─────────────┐ ┌────────┐   │
+│  │ GET /health  │ │ POST/predict │ │GET /forecast│ │  ...   │   │
+│  └──────────────┘ └──────────────┘ └─────────────┘ └────────┘   │
 └──────────────────────────┬──────────────────────────────────────┘
                            │
 ┌──────────────────────────▼──────────────────────────────────────┐
 │                      INFERENCE LAYER                            │
 │        scikit-learn + XGBoost + Prophet + joblib/dill           │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────────┐   │
-│  │ XGBoost  │  │ TF-IDF + │  │  Prophet │  │  K-Means /    │   │
-│  │Classifier│  │    LR    │  │Forecaster│  │    DBSCAN     │   │
-│  └──────────┘  └──────────┘  └──────────┘  └───────────────┘   │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────────┐    │
+│  │ XGBoost  │  │ TF-IDF + │  │  Prophet │  │  K-Means /    │    │
+│  │Classifier│  │    LR    │  │Forecaster│  │    DBSCAN     │    │
+│  └──────────┘  └──────────┘  └──────────┘  └───────────────┘    │
 └──────────────────────────┬──────────────────────────────────────┘
                            │ downloaded at startup
 ┌──────────────────────────▼──────────────────────────────────────┐
 │               MODEL REGISTRY (HuggingFace Dataset)              │
-│   8 × .pkl files — xgb_crime_model, label_encoder, le_remap,   │
+│   8 × .pkl files — xgb_crime_model, label_encoder, le_remap,    │
 │   nlp_model, tfidf_vectorizer, nlp_label_encoder,               │
 │   prophet_model, kmeans_model                                   │
 └─────────────────────────────────────────────────────────────────┘
